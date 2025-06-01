@@ -7,34 +7,120 @@
   <style>
     body {
       margin: 0;
-      font-family: Arial, sans-serif;
+      font-family: 'Segoe UI', sans-serif;
       background-color: #001f3f;
-      color: white;
+      color: #ffffff;
+    }
+
+    header {
+      background: #000814;
+      padding: 20px;
       text-align: center;
+    }
+
+    .logo {
+      font-size: 32px;
+      color: #00f0ff;
+      font-weight: bold;
+    }
+
+    .hero {
+      text-align: center;
+      padding: 60px 20px;
+    }
+
+    .hero h1 {
+      font-size: 48px;
+      color: #00f0ff;
+    }
+
+    .hero p {
+      font-size: 20px;
+      color: #dddddd;
+      margin-top: 10px;
+    }
+
+    .btn {
+      margin-top: 30px;
+      padding: 12px 28px;
+      background-color: #00f0ff;
+      color: #001f3f;
+      border: none;
+      border-radius: 6px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    .tools-section {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
       padding: 40px;
-    }
-    h1 {
-      color: #00ffff;
-      font-size: 3em;
-    }
-    p {
-      font-size: 1.2em;
-      max-width: 800px;
+      max-width: 1200px;
       margin: auto;
     }
-    footer {
-      margin-top: 40px;
-      font-size: 0.9em;
-      color: #ccc;
+
+    .tool-card {
+      background-color: #002c5a;
+      padding: 20px;
+      border-radius: 12px;
+      text-align: center;
+      transition: transform 0.3s ease;
+    }
+
+    .tool-card:hover {
+      transform: translateY(-5px);
+      background-color: #003e7a;
+    }
+
+    .tool-card h3 {
+      margin-bottom: 10px;
+      color: #00f0ff;
+    }
+
+    .footer {
+      text-align: center;
+      padding: 20px;
+      background-color: #000814;
+      font-size: 14px;
+      color: #888;
     }
   </style>
 </head>
 <body>
+
+<header>
+  <div class="logo">Toolverse.ai</div>
+</header>
+
+<section class="hero">
   <h1>Welcome to Toolverse.ai</h1>
-  <p>Explore cutting-edge AI tools like ChatGPT, Midjourney, AI agents, and automation solutions — all in one free platform.</p>
-  <p>Stay tuned! Toolverse.ai is building the future of AI accessibility for everyone.</p>
-  <footer>
-    &copy; 2025 Toolverse.ai — All rights reserved.
-  </footer>
+  <p>Explore the best AI tools, agents & automation — all in one place!</p>
+  <button class="btn">Explore Tools</button>
+</section>
+
+<section class="tools-section">
+  <div class="tool-card">
+    <h3>ChatGPT</h3>
+    <p>Conversational AI from OpenAI for smart chatting.</p>
+  </div>
+  <div class="tool-card">
+    <h3>Midjourney</h3>
+    <p>AI art generation tool — turn ideas into visuals.</p>
+  </div>
+  <div class="tool-card">
+    <h3>AutoGPT</h3>
+    <p>Fully autonomous AI agents to automate tasks.</p>
+  </div>
+  <div class="tool-card">
+    <h3>Runway ML</h3>
+    <p>Creative video & media generation using AI.</p>
+  </div>
+</section>
+
+<footer class="footer">
+  © 2025 Toolverse.ai — All rights reserved.
+</footer>
+
 </body>
 </html>
