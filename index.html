@@ -57,13 +57,21 @@
       display: inline-block;
     }
 
+    section {
+      padding: 40px 20px;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    h2 {
+      color: #00f0ff;
+      margin-bottom: 20px;
+    }
+
     .tools-section {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
       gap: 20px;
-      padding: 40px;
-      max-width: 1200px;
-      margin: auto;
     }
 
     .tool-card {
@@ -74,10 +82,6 @@
       transition: transform 0.3s ease, background-color 0.3s ease;
       color: #00f0ff;
       text-decoration: none;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      height: 150px;
     }
 
     .tool-card:hover {
@@ -85,15 +89,31 @@
       background-color: #003e7a;
     }
 
-    .tool-card h3 {
-      margin-bottom: 10px;
-    }
-
     .tool-card p {
       color: #cccccc;
-      margin: 0;
-      font-size: 14px;
-      flex-grow: 1;
+    }
+
+    .faq-item {
+      margin-bottom: 15px;
+    }
+
+    .faq-item strong {
+      color: #00f0ff;
+    }
+
+    form input, form textarea, form select, form button {
+      width: 100%;
+      padding: 10px;
+      margin-top: 10px;
+      border-radius: 6px;
+      border: none;
+      font-size: 16px;
+    }
+
+    form button {
+      background-color: #00f0ff;
+      color: #001f3f;
+      cursor: pointer;
     }
 
     .footer {
@@ -114,26 +134,75 @@
 <section class="hero">
   <h1>Welcome to Toolverse.ai</h1>
   <p>Explore the best AI tools, agents & automation — all in one place!</p>
-  <a href="#tools" class="btn">Explore Tools</a>
+  <a href="#explore" class="btn">Explore Tools</a>
 </section>
 
-<section id="tools" class="tools-section">
-  <a href="https://chat.openai.com/" target="_blank" class="tool-card" rel="noopener noreferrer">
-    <h3>ChatGPT</h3>
-    <p>Conversational AI from OpenAI for smart chatting.</p>
-  </a>
-  <a href="https://www.midjourney.com/app/" target="_blank" class="tool-card" rel="noopener noreferrer">
-    <h3>Midjourney</h3>
-    <p>AI art generation tool — turn ideas into visuals.</p>
-  </a>
-  <a href="https://www.autogpt.com/" target="_blank" class="tool-card" rel="noopener noreferrer">
-    <h3>AutoGPT</h3>
-    <p>Fully autonomous AI agents to automate tasks.</p>
-  </a>
-  <a href="https://runwayml.com/" target="_blank" class="tool-card" rel="noopener noreferrer">
-    <h3>Runway ML</h3>
-    <p>Creative video & media generation using AI.</p>
-  </a>
+<section id="explore">
+  <h2>Top Categories</h2>
+  <ul>
+    <li>AI Writing Tools</li>
+    <li>AI Image & Video Generators</li>
+    <li>Automation & Agents</li>
+    <li>Code Assistants</li>
+    <li>Voice & Speech AI</li>
+  </ul>
+
+  <h2>Popular AI Tools</h2>
+  <div class="tools-section">
+    <a href="https://chat.openai.com/" target="_blank" class="tool-card">
+      <h3>ChatGPT</h3>
+      <p>Conversational AI from OpenAI for smart chatting.</p>
+    </a>
+    <a href="https://www.midjourney.com/app/" target="_blank" class="tool-card">
+      <h3>Midjourney</h3>
+      <p>AI art generation tool — turn ideas into visuals.</p>
+    </a>
+    <a href="https://www.autogpt.com/" target="_blank" class="tool-card">
+      <h3>AutoGPT</h3>
+      <p>Fully autonomous AI agents to automate tasks.</p>
+    </a>
+    <a href="https://runwayml.com/" target="_blank" class="tool-card">
+      <h3>Runway ML</h3>
+      <p>Creative video & media generation using AI.</p>
+    </a>
+  </div>
+
+  <h2>Submit Your Tool</h2>
+  <form>
+    <input type="text" placeholder="Tool Name" required />
+    <textarea placeholder="Tool Description" required></textarea>
+    <input type="url" placeholder="Tool Website URL" required />
+    <select required>
+      <option value="">Select Category</option>
+      <option value="writing">AI Writing Tools</option>
+      <option value="image">AI Image & Video</option>
+      <option value="agents">Agents & Automation</option>
+      <option value="code">Code Assistants</option>
+      <option value="voice">Voice AI</option>
+    </select>
+    <button type="submit">Submit Tool</button>
+  </form>
+
+  <h2>Tutorials</h2>
+  <ul>
+    <li>🔹 How to use ChatGPT effectively</li>
+    <li>🔹 Generate art with Midjourney</li>
+    <li>🔹 Set up AutoGPT or AgentGPT</li>
+  </ul>
+
+  <h2>FAQ</h2>
+  <div class="faq-item">
+    <strong>What is Toolverse.ai?</strong>
+    <p>A curated hub of the best AI tools and automation resources.</p>
+  </div>
+  <div class="faq-item">
+    <strong>Is it free?</strong>
+    <p>Yes, all tools listed here are free to explore and many are free to use.</p>
+  </div>
+  <div class="faq-item">
+    <strong>Can I list my tool?</strong>
+    <p>Absolutely! Use the "Submit Your Tool" form above to get listed.</p>
+  </div>
 </section>
 
 <footer class="footer">
