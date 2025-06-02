@@ -5,6 +5,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Toolverse.ai - AI Tools & Automation</title>
   <style>
+
+    html {
+      scroll-behavior: smooth;
+    }
+
     body {
       margin: 0;
       font-family: 'Segoe UI', sans-serif;
@@ -49,6 +54,8 @@
       border-radius: 6px;
       font-size: 16px;
       cursor: pointer;
+      text-decoration: none;
+      display: inline-block;
     }
 
     .tools-section {
@@ -66,16 +73,25 @@
       border-radius: 12px;
       text-align: center;
       transition: transform 0.3s ease;
+      color: #00f0ff;
+      text-decoration: none;
+      display: block;
     }
 
     .tool-card:hover {
       transform: translateY(-5px);
       background-color: #003e7a;
+      color: #00f0ff;
+      text-decoration: none;
     }
 
     .tool-card h3 {
       margin-bottom: 10px;
       color: #00f0ff;
+    }
+
+    .tool-card p {
+      color: #c0d6e4;
     }
 
     .footer {
@@ -96,26 +112,26 @@
 <section class="hero">
   <h1>Welcome to Toolverse.ai</h1>
   <p>Explore the best AI tools, agents & automation — all in one place!</p>
-  <button class="btn">Explore Tools</button>
+  <a href="#tools" class="btn">Explore Tools</a>
 </section>
 
-<section class="tools-section">
-  <div class="tool-card">
+<section id="tools" class="tools-section">
+  <a href="https://chat.openai.com/" target="_blank" class="tool-card" rel="noopener noreferrer">
     <h3>ChatGPT</h3>
     <p>Conversational AI from OpenAI for smart chatting.</p>
-  </div>
-  <div class="tool-card">
+  </a>
+  <a href="https://www.midjourney.com/" target="_blank" class="tool-card" rel="noopener noreferrer">
     <h3>Midjourney</h3>
     <p>AI art generation tool — turn ideas into visuals.</p>
-  </div>
-  <div class="tool-card">
+  </a>
+  <a href="https://www.autogpt.com/" target="_blank" class="tool-card" rel="noopener noreferrer">
     <h3>AutoGPT</h3>
     <p>Fully autonomous AI agents to automate tasks.</p>
-  </div>
-  <div class="tool-card">
+  </a>
+  <a href="https://runwayml.com/" target="_blank" class="tool-card" rel="noopener noreferrer">
     <h3>Runway ML</h3>
     <p>Creative video & media generation using AI.</p>
-  </div>
+  </a>
 </section>
 
 <footer class="footer">
